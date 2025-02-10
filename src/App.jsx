@@ -4,7 +4,6 @@ import About from "./Components/About";
 import Certificates from "./Components/Certificates";
 import Work from "./Components/Work";
 
-
 function App() {
   return (
     <div>
