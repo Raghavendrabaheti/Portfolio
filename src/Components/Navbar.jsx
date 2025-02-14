@@ -1,4 +1,4 @@
-import { Link } from "react-scroll";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -6,18 +6,26 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-2xl font-bold text-blue-500">Raghav</h1>
         <ul className="flex space-x-6">
-          {["home", "about", "certificates", "work"].map((section) => (
-            <li key={section}>
-              <Link
-                to={section}
-                smooth={true}
-                duration={500}
-                className="cursor-pointer hover:text-blue-500 transition"
-              >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </Link>
-            </li>
-          ))}
+          <li>
+            <Link to="/" className="cursor-pointer hover:text-blue-500 transition">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="cursor-pointer hover:text-blue-500 transition">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/certificates" className="cursor-pointer hover:text-blue-500 transition">
+              Certificates
+            </Link>
+          </li>
+          <li>
+            <Link to="/work" className="cursor-pointer hover:text-blue-500 transition">
+              Work
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

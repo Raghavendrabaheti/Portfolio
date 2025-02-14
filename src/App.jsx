@@ -1,19 +1,12 @@
-import Navbar from "./Components/Navbar";
-import Home from "./Components/Home";
-import About from "./Components/About";
-import Certificates from "./Components/Certificates";
-import Work from "./Components/Work";
+import React from 'react';
+import Routes from './Router.jsx';
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Navbar />
-      <Home />
-      <About />
-      <Certificates />
-      <Work />
+    <div className="App">
+      <Routes />
     </div>
   );
-}
+};
 
 export default App;
