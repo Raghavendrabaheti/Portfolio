@@ -17,14 +17,14 @@ const Home = () => {
         <h1 className="text-4xl md:text-6xl text-white font-bold mb-4">
           Hi, I'm <span className="text-[]">Raghavendra Baheti</span>
         </h1>
-        <p className="text-lg md:text-xl text-[#beb6d2] mb-6">
+        <p className="text-lg md:text-xl mb-6">
           A passionate Java Developer focused on building interactive and user-friendly web applications.
         </p>
         <div className="flex gap-4">
-          <a href="#work" className="px-6 py-3 rounded-lg bg-[#fa1e4e] hover:bg-[#bf173c] text-black transition">
+          <a href="#work" className="px-6 py-3 rounded-lg bg-[#fa1e4e] hover:bg-[#bf173c] transition">
             View My Work
           </a>
-          <a href="#contact" className="px-6 py-3 rounded-lg border border-[#fa1e4e] text-[#beb6d2] hover:bg-[#fa1e4e] hover:text-white transition">
+          <a href="#contact" className="px-6 py-3 rounded-lg border border-[#fa1e4e]  hover:bg-[#fa1e4e] hover:text-white transition">
             Contact Me
           </a>
         </div>
