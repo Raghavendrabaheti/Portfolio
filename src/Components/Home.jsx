@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import img from '../assets/img.webp';
+import img from '../assets/homebg1.png';
 
 const Home = () => {
   return (
@@ -14,8 +14,8 @@ const Home = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-4xl md:text-6xl text-[#beb6d2] font-bold mb-4">
-          Hi, I'm <span className="text-[#fa1e4e]">Raghavendra Baheti</span>
+        <h1 className="text-4xl md:text-6xl text-white font-bold mb-4">
+          Hi, I'm <span className="text-[]">Raghavendra Baheti</span>
         </h1>
         <p className="text-lg md:text-xl text-[#beb6d2] mb-6">
           A passionate Java Developer focused on building interactive and user-friendly web applications.
