@@ -21,10 +21,10 @@ const Home = () => {
           A passionate Java Developer focused on building interactive and user-friendly web applications.
         </p>
         <div className="flex gap-4">
-          <a href="#work" className="px-6 py-3 rounded-lg bg-[#fa1e4e] hover:bg-[#bf173c] transition">
+          <a href="Work" className="px-6 py-3 rounded-lg bg-[#fa1e4e] hover:bg-[#bf173c] transition">
             View My Work
           </a>
-          <a href="#contact" className="px-6 py-3 rounded-lg border border-[#fa1e4e]  hover:bg-[#fa1e4e] hover:text-white transition">
+          <a href="Contact" className="px-6 py-3 rounded-lg border border-[#fa1e4e]  hover:bg-[#fa1e4e] hover:text-white transition">
             Contact Me
           </a>
         </div>
