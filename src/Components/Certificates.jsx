@@ -5,7 +5,7 @@ const Certificates = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://api.github.com/repos/Raghavendrabaheti/Certificates/contents/certificates.json')
+    fetch('https://api.github.com/repos/Raghavendrabaheti/Certificates/Components/certificates')
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
