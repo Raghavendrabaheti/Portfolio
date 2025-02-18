@@ -8,7 +8,7 @@ const About = () => {
       With a strong foundation in Java and DSA, I focus on problem-solving, algorithm optimization, and competitive programming to enhance my coding skills.
       </p>
     <div className="flex justify-center items-center h-screen">
-      <GitHubCalendar username="Raghavendrabaheti" blockSize={15} blockMargin={5} fontSize={16} />
+      <GitHubCalendar username="Raghavendrabaheti" />
     </div>
     </section>
   
