@@ -11,7 +11,7 @@ const Certificates = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         return response.json();
-        
+
       })
       .then(data => {
         try {
@@ -19,6 +19,7 @@ const Certificates = () => {
           setCertificates(certificateList);
         } catch (e) {
           setError('Error decoding certificate data');
+          
         }
       })
       .catch(error => {
