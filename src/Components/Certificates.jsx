@@ -11,6 +11,7 @@ const Certificates = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         return response.json();
+        
       })
       .then(data => {
         try {
