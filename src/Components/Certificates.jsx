@@ -5,22 +5,19 @@ const Certificates = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://api.github.com/repos/Raghavendrabaheti/Certificates/contents/certificates.json')
+    fetch('https://api.github.com/repos/Raghavendrabaheti/Certificates/contents/certificates')
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         return response.json();
-
       })
       .then(data => {
-        try {
-          const certificateList = JSON.parse(atob(data.content));
-          setCertificates(certificateList);
-        } catch (e) {
-          setError('Error decoding certificate data');
-          
-        }
+        const certificateList = data.map(file => ({
+          name: file.name,
+          url: file.download_url
+        }));
+        setCertificates(certificateList);
       })
       .catch(error => {
         console.error('Error fetching certificates:', error);
@@ -36,7 +33,15 @@ const Certificates = () => {
       ) : (
         <ul className="text-lg text-gray-300">
           {certificates.map((certificate, index) => (
-            <li key={index}>✅ {certificate}</li>
+            <li key={index} className="mb-2">
+              {certificate.name.endsWith('.png') || certificate.name.endsWith('.jpeg') ? (
+                <img src={certificate.url} alt={certificate.name} className="w-full h-auto mb-4" />
+              ) : (
+                <a href={certificate.url} target="_blank" rel="noopener noreferrer" className="text-blue-400">
+                  {certificate.name}
+                </a>
+              )}
+            </li>
           ))}
         </ul>
       )}
