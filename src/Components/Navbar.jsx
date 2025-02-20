@@ -37,6 +37,11 @@ const Navbar = () => {
               Work
             </Link>
           </li>
+          <li>
+            <Link to="/work" className="cursor-pointer hover:text-blue-500 transition">
+              Projects
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
