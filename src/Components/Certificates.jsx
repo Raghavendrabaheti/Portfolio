@@ -42,7 +42,7 @@ const Certificates = () => {
   }, []);
 
   return (
-    <section id="certificates" className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-6">
+    <section id="certificates" className="h-full bg-gray-900 text-white flex flex-col items-center justify-center p-20">
       <h2 className="text-4xl font-bold text-blue-500 mb-8 text-center">My Certificates</h2>
       <Container maxWidth="lg">
         {error ? (
