@@ -1,20 +1,23 @@
 import React from 'react';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import image from '../assets/SSProject/quizdsa.png';
+import image1 from '../assets/SSProject/MultiGame.png';
 
 const projectsData = [
   {
     title: 'DSA QUIZ',
     description: 'This is a description of project one.',
     imageUrl: image,
-    projectUrl: 'https://quizdsa.netlify.app/'
+    projectUrl: 'https://quizdsa.netlify.app/',
+    repoUrl: 'https://github.com/yourusername/quizdsa'
   },
   {
-    title: 'Project Two',
+    title: 'Multi-Games',
     description: 'This is a description of project two.',
-    imageUrl: 'https://via.placeholder.com/200',
-    projectUrl: '#'
+    imageUrl: image1,
+    projectUrl: 'https://funf.netlify.app/',
+    repoUrl: 'https://github.com/yourusername/multigames'
   },
-  // Add more projects as needed
 ];
 
 const Projects = () => {
@@ -28,7 +31,12 @@ const Projects = () => {
             <div className="p-4">
               <h3 className="text-xl font-bold mb-2">{project.title}</h3>
               <p className="text-gray-400 mb-4">{project.description}</p>
-              <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">View Project</a>
+              <div className="flex justify-between items-center">
+                <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">View Project</a>
+                <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+                  <GitHubIcon />
+                </a>
+              </div>
             </div>
           </div>
         ))}
