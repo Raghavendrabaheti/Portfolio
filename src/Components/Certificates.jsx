@@ -7,10 +7,25 @@ import CardActionArea from '@mui/material/CardActionArea';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
+// Manually import each certificate
+import certificate1 from '../assets/Certificates/CSS.png';
+import certificate2 from '../assets/Certificates/js.png';
+import certificate3 from '../assets/Certificates/MYSQL.png';
+import certificate4  from '../assets/Certificates/Mernstack.jpg';
+import certificate5 from '../assets/Certificates/ndr.jpeg';
+import certificate6 from '../assets/Certificates/sql2.jpg';
+import certificate7 from '../assets/Certificates/cybersecurity.jpg';
+// import certificate3 from '../assets/certificates/certificate3.pdf';
+
 const certificatesData = [
-  { name: 'certificate1.png', type: 'image' },
-  { name: 'certificate2.jpeg', type: 'image' },
-  { name: 'certificate3.pdf', type: 'pdf' }
+  { name: 'certificate1.png', url: certificate1, type: 'image' },
+  { name: 'certificate2.png', url: certificate2, type: 'image' },
+  { name: 'certificate3.png', url: certificate3, type: 'image' },
+  { name: 'certificate4.jpg', url: certificate4, type: 'image' },
+  { name: 'certificate5.jpeg', url: certificate5, type: 'image' },
+  { name: 'certificate6.jpg', url: certificate6, type: 'image' },
+  { name: 'certificate7.jpg', url: certificate7, type: 'image' },
+  // { name: 'certificate3.pdf', url: certificate3, type: 'pdf' }
 ];
 
 const Certificates = () => {
@@ -19,12 +34,7 @@ const Certificates = () => {
 
   useEffect(() => {
     try {
-      const certificateList = certificatesData.map(file => ({
-        name: file.name,
-        url: `../assets/Certificates/${file.name}`,
-        type: file.type
-      }));
-      setCertificates(certificateList);
+      setCertificates(certificatesData);
     } catch (error) {
       console.error('Error fetching certificates:', error);
       setError('Error fetching certificates');
