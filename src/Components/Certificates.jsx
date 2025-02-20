@@ -5,7 +5,7 @@ const Certificates = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://api.github.com/repos/Raghavendrabaheti/Certificates/contents/certificates')
+    fetch('https://raw.githubusercontent.com/Raghavendrabaheti/Certificates/main/certificates/certificates.json')
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -13,11 +13,7 @@ const Certificates = () => {
         return response.json();
       })
       .then(data => {
-        const certificateList = data.map(file => ({
-          name: file.name,
-          url: file.download_url
-        }));
-        setCertificates(certificateList);
+        setCertificates(data);
       })
       .catch(error => {
         console.error('Error fetching certificates:', error);
