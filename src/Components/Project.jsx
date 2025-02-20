@@ -2,6 +2,9 @@ import React from 'react';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import image from '../assets/SSProject/quizdsa.png';
 import image1 from '../assets/SSProject/MultiGame.png';
+import image2 from '../assets/SSProject/name.png';
+import image3 from '../assets/SSProject/bilingsys.png';
+import image4 from '../assets/SSProject/tictactoe.png';
 
 const projectsData = [
   {
@@ -10,6 +13,27 @@ const projectsData = [
     imageUrl: image,
     projectUrl: 'https://quizdsa.netlify.app/',
     repoUrl: 'https://github.com/yourusername/quizdsa'
+  },
+  {
+    title: 'Multi-Games',
+    description: 'This is a description of project two.',
+    imageUrl: image1,
+    projectUrl: 'https://funf.netlify.app/',
+    repoUrl: 'https://github.com/yourusername/multigames'
+  },
+  {
+    title: 'Multi-Games',
+    description: 'This is a description of project two.',
+    imageUrl: image1,
+    projectUrl: 'https://funf.netlify.app/',
+    repoUrl: 'https://github.com/yourusername/multigames'
+  },
+  {
+    title: 'Multi-Games',
+    description: 'This is a description of project two.',
+    imageUrl: image1,
+    projectUrl: 'https://funf.netlify.app/',
+    repoUrl: 'https://github.com/yourusername/multigames'
   },
   {
     title: 'Multi-Games',
