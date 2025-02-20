@@ -6,7 +6,7 @@ const projectsData = [
     title: 'DSA QUIZ',
     description: 'This is a description of project one.',
     imageUrl: image,
-    projectUrl: '#'
+    projectUrl: 'https://quizdsa.netlify.app/'
   },
   {
     title: 'Project Two',
