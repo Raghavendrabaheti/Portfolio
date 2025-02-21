@@ -5,42 +5,49 @@ import image1 from '../assets/SSProject/MultiGame.png';
 import image2 from '../assets/SSProject/name.png';
 import image3 from '../assets/SSProject/bilingsys.png';
 import image4 from '../assets/SSProject/tictactoe.png';
-
+import image5 from '../assets/SSProject/SIH.png';
 const projectsData = [
   {
-    title: 'DSA QUIZ',
+    title: 'DSA Quiz',
     description: 'This is a description of project one.',
     imageUrl: image,
     projectUrl: 'https://quizdsa.netlify.app/',
-    repoUrl: 'https://github.com/yourusername/quizdsa'
+    repoUrl: 'https://github.com/raghavendrabaheti/quizdsa'
   },
   {
     title: 'Multi-Games',
     description: 'This is a description of project two.',
     imageUrl: image1,
     projectUrl: 'https://funf.netlify.app/',
-    repoUrl: 'https://github.com/yourusername/multigames'
+    repoUrl: 'https://github.com/Raghavendrabaheti/Fun_Games'
   },
   {
-    title: 'Multi-Games',
+    title: 'name',
     description: 'This is a description of project two.',
-    imageUrl: image1,
-    projectUrl: 'https://funf.netlify.app/',
-    repoUrl: 'https://github.com/yourusername/multigames'
+    imageUrl: image2,
+    projectUrl: 'https://raghavendrab.netlify.app/',
+    repoUrl: '#'
   },
   {
-    title: 'Multi-Games',
+    title: 'tictactoe',
     description: 'This is a description of project two.',
-    imageUrl: image1,
-    projectUrl: 'https://funf.netlify.app/',
-    repoUrl: 'https://github.com/yourusername/multigames'
+    imageUrl: image3,
+    projectUrl: 'https://funtt.netlify.app/',
+    repoUrl: 'https://github.com/Raghavendrabaheti/Fun_Games'
   },
   {
-    title: 'Multi-Games',
+    title: 'Billing System', 
     description: 'This is a description of project two.',
-    imageUrl: image1,
-    projectUrl: 'https://funf.netlify.app/',
-    repoUrl: 'https://github.com/yourusername/multigames'
+    imageUrl: image4,
+    projectUrl: 'https://billingsystemraghavendra.netlify.app/',
+    repoUrl: 'https://github.com/Raghavendrabaheti/'
+  },
+  {
+    title: 'SIH23', 
+    description: 'This is a description of project two.',
+    imageUrl: image5,
+    projectUrl: 'https://raghavendrabaheti.github.io/SIH23.github.io/',
+    repoUrl: 'https://github.com/Raghavendrabaheti/SIH23.github.io'
   },
 ];
 
