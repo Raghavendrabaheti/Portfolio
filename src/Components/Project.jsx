@@ -7,7 +7,7 @@ import image3 from '../assets/SSProject/bilingsys.png';
 import image4 from '../assets/SSProject/tictactoe.png';
 import image5 from '../assets/SSProject/SIH.png';
 const projectsData = [
-  
+
   {
     title: 'DSA Quiz',
     description: 'This is a description of project one.',
@@ -52,7 +52,9 @@ const projectsData = [
   },
 ];
 
+
 const Projects = () => {
+  
   return (
     <section id="projects" className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-6">
       <h2 className="text-4xl font-bold text-blue-500 mb-8 text-center">My Projects</h2>
