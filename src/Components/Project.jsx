@@ -70,10 +70,11 @@ const Projects = () => {
                 <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
                   <GitHubIcon />
                 </a>
+                
               </div>
             </div>
           </div>
-          
+
         ))}
 
       </div>
