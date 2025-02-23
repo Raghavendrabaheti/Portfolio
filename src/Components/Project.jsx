@@ -7,6 +7,7 @@ import image3 from '../assets/SSProject/bilingsys.png';
 import image4 from '../assets/SSProject/tictactoe.png';
 import image5 from '../assets/SSProject/SIH.png';
 const projectsData = [
+  
   {
     title: 'DSA Quiz',
     description: 'This is a description of project one.',
