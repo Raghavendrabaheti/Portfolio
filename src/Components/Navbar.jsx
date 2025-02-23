@@ -30,6 +30,7 @@ const Navbar = () => {
           <li>
             <Link to="/certificates" className="cursor-pointer hover:text-blue-500 transition">
               Certificates
+
             </Link>
           </li>
           <li>
@@ -40,6 +41,7 @@ const Navbar = () => {
           <li>
             <Link to="/project" className="cursor-pointer hover:text-blue-500 transition">
               Projects
+              
             </Link>
           </li>
         </ul>
