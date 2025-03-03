@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import img from '../assets/bg.png';
+import img from '../assets/bgg.jpg';
 
 const Home = () => {
   return (
