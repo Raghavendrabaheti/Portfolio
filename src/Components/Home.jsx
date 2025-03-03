@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import img from '../assets/bgg.jpg';
+// import img from '../assets/bg1.jpg';
 
 const Home = () => {
   return (
@@ -8,8 +8,9 @@ const Home = () => {
       className="relative flex flex-col items-start justify-center h-screen text-white px-6 w-full m-0"
     >
       <div 
-        className="absolute inset-0 bg-cover bg-center  m-0"
-        style={{ backgroundImage: `url(${img})` }}
+        className="absolute inset-0 bg-cover bg-center bg-black m-0"
+        // style={{ backgroundImage: `url(${img})` }}
+        
       ></div>
       <motion.div 
         className="relative text-left max-w-3xl bg-opacity-50 p-8 rounded-lg"
