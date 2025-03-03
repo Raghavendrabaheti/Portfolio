@@ -1,34 +1,38 @@
 import { motion } from 'framer-motion';
-// import img from '../assets/bg1.jpg';
 
 const Home = () => {
   return (
     <section 
       id="home" 
-      className="relative flex flex-col items-start justify-center h-screen text-white px-6 w-full m-0"
+      className="relative flex flex-col items-start justify-center h-screen text-white px-6 w-full m-0 bg-[#0b0b0f]"
     >
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-black m-0"
-        // style={{ backgroundImage: `url(${img})` }}
-        
-      ></div>
+      {/* Animated Background (Minimal Glow) */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.05),_transparent_80%)]"></div>
+
+      {/* Animated Text Container */}
       <motion.div 
-        className="relative text-left max-w-3xl bg-opacity-50 p-8 rounded-lg"
-        initial={{ opacity: 0, y: -20 }}
+        className="relative text-left max-w-3xl p-8 rounded-lg border border-gray-800 bg-[#111118] backdrop-blur-md shadow-lg shadow-black/40"
+        initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1, ease: "easeOut" }}
       >
-        <h1 className="text-4xl md:text-6xl text-white font-bold mb-4">
-          Hi, I'm <span className="text-[]">Raghavendra Baheti</span>
+        {/* Elegant Typography */}
+        <h1 className="text-4xl md:text-6xl font-semibold mb-4 leading-tight">
+          Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-500">
+            Raghavendra Baheti
+          </span>
         </h1>
-        <p className="text-lg md:text-xl mb-6">
-          A passionate Java Developer focused on building interactive and user-friendly web applications.
+
+        <p className="text-lg md:text-xl text-gray-400 mb-6">
+          A passionate Java Developer focused on crafting smooth and efficient applications.
         </p>
+
+        {/* Minimalist Buttons with Subtle Glow */}
         <div className="flex gap-4">
-          <a href="Work" className="px-6 py-3 rounded-lg bg-[#fa1e4e] hover:bg-[#bf173c] transition">
+          <a href="Work" className="px-6 py-3 rounded-md bg-gray-900 hover:bg-gray-800 text-white transition border border-gray-700 shadow-sm shadow-gray-700/50">
             View My Work
           </a>
-          <a href="Contact" className="px-6 py-3 rounded-lg border border-[#fa1e4e] hover:bg-[#fa1e4e] hover:text-white transition">
+          <a href="Contact" className="px-6 py-3 rounded-md border border-gray-600 text-gray-400 hover:text-white hover:border-white transition">
             Contact Me
           </a>
         </div>
