@@ -1,82 +1,128 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Canvas } from "@react-three/fiber";
-import { Sphere, MeshDistortMaterial, OrbitControls } from "@react-three/drei";
-import profilePic from "../assets/profile.jpeg"; // Import profile image
+import { Menu, X, Github, Linkedin } from "lucide-react";
+import profilePic from "../assets/profile.jpeg";
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <nav className="fixed top-0 left-0 w-full bg-[#0b0b0f] bg-opacity-80 backdrop-blur-md shadow-md text-white py-4 px-6 z-50">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* Social Links */}
+        <div className="hidden md:flex space-x-4">
+          <a
+            href="https://github.com/Raghavendrabaheti"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-400 transition"
+          >
+            <Github size={24} />
+          </a>
+          <a
+            href="https://linkedin.com/in/raghavendra-baheti-909109244"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-400 transition"
+          >
+            <Linkedin size={24} />
+          </a>
+        </div>
+
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex space-x-6 text-lg">
+          {["Home", "About", "Work", "Projects", "Certificates"].map((item) => (
+            <li key={item}>
+              <a
+                href={`#${item.toLowerCase()}`}
+                className="hover:text-blue-400 transition"
+              >
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Mobile Menu Toggle */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden focus:outline-none"
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          className="absolute top-full left-0 w-full bg-[#0b0b0f] bg-opacity-90 backdrop-blur-md shadow-lg text-white py-4 flex flex-col items-center space-y-4 md:hidden"
+        >
+          {["Home", "About", "Work", "Projects", "Certificates"].map((item) => (
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="text-lg hover:text-blue-400 transition"
+              onClick={() => setIsOpen(false)}
+            >
+              {item}
+            </a>
+          ))}
+
+          {/* Mobile Social Links */}
+          <div className="flex space-x-6 mt-4">
+            <a
+              href="https://github.com/Raghavendrabaheti"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition"
+            >
+              <Github size={28} />
+            </a>
+            <a
+              href="https://linkedin.com/in/raghavendra-baheti-909109244"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition"
+            >
+              <Linkedin size={28} />
+            </a>
+          </div>
+        </motion.div>
+      )}
+    </nav>
+  );
+};
 
 const Home = () => {
   return (
-    <section
-      id="home"
-      className="relative flex flex-col items-center justify-center min-h-screen text-white px-6 md:px-12 lg:px-20 w-full bg-[#0b0b0f] overflow-hidden pt-16"
+    <section 
+      id="home" 
+      className="relative flex flex-col-reverse md:flex-row items-center justify-center min-h-screen text-white px-6 md:px-12 lg:px-20 w-full bg-[#0b0b0f] overflow-auto"
     >
-      {/* Background Glow Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.06),_transparent_80%)]"></div>
-      <div className="absolute -top-20 left-0 w-96 h-96 bg-blue-500 rounded-full opacity-10 blur-3xl animate-pulse"></div>
-
-      {/* 3D Sphere in Background */}
-      <div className="absolute right-10 top-24 md:top-28 lg:top-32 w-[450px] h-[450px] opacity-30 pointer-events-none">
-        <Canvas>
-          <OrbitControls enableZoom={false} />
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[2, 2, 2]} intensity={1} />
-          <Sphere args={[1.5, 100, 200]} scale={2.3}>
-            <MeshDistortMaterial 
-              color="#0066ff" 
-              attach="material" 
-              distort={0.5} 
-              speed={2} 
-            />
-          </Sphere>
-        </Canvas>
-      </div>
-
-      {/* Profile Image (Perfect Positioning) */}
-      <motion.div
-        className="relative flex flex-col items-center text-center mt-4 md:mt-6"
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-      >
-        <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-full border-8 border-gray-700 shadow-xl overflow-hidden">
-          <img
-            src={profilePic}
-            alt="Raghavendra Baheti"
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Text Content */}
-        <h1 className="text-3xl md:text-4xl font-bold mt-5">
-          Hello, I'm{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">
-            Raghavendra Baheti
-          </span>
+      <div className="w-full md:w-1/2 text-center md:text-left">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
+          Hi, I am <span className="text-blue-400">Raghavendra Baheti</span>
         </h1>
-        <p className="text-base md:text-lg text-gray-400 mt-3 max-w-lg">
-          A <span className="text-blue-400">DevOps Engineer</span> & software enthusiast, passionate about building scalable applications with automation & deployment efficiency.
+        <p className="text-lg md:text-xl text-gray-300 mb-6">
+          A Passionate DevOps and Software Engineering enthusiast, building scalable applications with automation and seamless deployment.
         </p>
-
-        {/* Buttons */}
-        <div className="flex gap-5 mt-5">
-          <motion.a
-            href="your_resume_link.pdf"
-            target="_blank"
-            className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white shadow-lg transition-all transform hover:scale-105"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
+        <div className="flex space-x-4">
+          <a href="your_resume_link.pdf" target="_blank" className="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white transition shadow-lg shadow-blue-700/40">
             My Resume
-          </motion.a>
-          <motion.a
-            href="#contact"
-            className="px-6 py-3 rounded-lg border border-gray-500 text-gray-300 hover:text-white hover:border-white transition-all transform hover:scale-105"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
+          </a>
+          <a href="#contact" className="px-6 py-3 rounded-lg border border-gray-500 text-gray-300 hover:text-white hover:border-white transition">
             Let's Connect
-          </motion.a>
+          </a>
         </div>
-      </motion.div>
+      </div>
+      <div className="w-full md:w-1/2 flex justify-center">
+        <div className="relative w-84 h-84 md:w-92 md:h-92 rounded-full border-1 border-blue-500 overflow-hidden shadow-lg shadow-blue-700/40">
+          <img src={profilePic} alt="Raghavendra Baheti" className="w-full h-full object-cover" />
+        </div>
+      </div>
     </section>
   );
 };
