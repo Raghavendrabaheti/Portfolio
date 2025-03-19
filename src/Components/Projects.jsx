@@ -8,37 +8,9 @@ import image1 from '../assets/SSProject/MultiGame.png';
 import image2 from '../assets/SSProject/name.png';
 import image3 from '../assets/SSProject/bilingsys.png';
 import image4 from '../assets/SSProject/tictactoe.png';
-import image5 from '../assets/SSProject/SIH.png';
-import image6 from '../assets/SSProject/logithon.jpeg';
-import image7 from '../assets/SSProject/sih24.jpeg';
-
 
 // Categorized Projects
 const projectsData = {
-  hackathon: [
-    {
-      title: 'Multi-Modal Cross-Border Route Selector',
-      description: 'A logistics optimization system using Dijkstra Algorithm',
-      imageUrl: image6,
-      projectUrl: 'https://github.com/Tech-Transit',
-      repoUrl: 'https://github.com/Tech-Transit'
-    },
-    {
-      title: 'SIH23',
-      description: 'Smart India Hackathon 2023 project.',
-      imageUrl: image5,
-      projectUrl: 'https://raghavendrabaheti.github.io/SIH23.github.io/',
-      repoUrl: 'https://github.com/Raghavendrabaheti/SIH23.github.io'
-    },
-    {
-      title: 'SIH24',
-      description: 'Smart India Hackathon 2024 project.',
-      imageUrl: image7,
-      projectUrl: 'https://raghavendrabaheti.github.io/SIH23.github.io/',
-      repoUrl: 'https://github.com/Raghavendrabaheti/SIH-2024'
-    },
-   
-  ],
   web: [
     {
       title: 'DSA Quiz',
@@ -121,7 +93,6 @@ const Projects = () => {
       className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6"
     >
       <h2 className="text-4xl font-bold text-blue-400 mb-12 text-center">My Projects</h2>
-      <ProjectSection title="🚀 Hackathon Projects" projects={projectsData.hackathon} />
       <ProjectSection title="🌐 Web Development Projects" projects={projectsData.web} />
       <ProjectSection title="⚙️ DevOps & Cloud Projects" projects={projectsData.devops} />
     </section>
