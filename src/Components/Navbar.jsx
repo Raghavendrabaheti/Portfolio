@@ -33,7 +33,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-6 text-lg">
-          {["Home", "About", "Certificates", "Work", "Projects"].map((item) => (
+          {["Home", "About", "Work", "Projects", "Certificates"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}
@@ -64,7 +64,7 @@ const Navbar = () => {
           exit={{ opacity: 0, y: -20 }}
           className="absolute top-full left-0 w-full bg-gray-900 bg-opacity-90 backdrop-blur-md shadow-lg text-white py-4 flex flex-col items-center space-y-4 md:hidden"
         >
-          {["Home", "About", "Certificates", "Work", "Projects"].map((item) => (
+          {["Home", "About", "Work", "Projects", "Certificates"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}

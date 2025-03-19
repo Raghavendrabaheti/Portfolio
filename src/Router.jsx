@@ -13,9 +13,9 @@ const App = () => {
       <main className="flex flex-col">
         <section id="home" className="min-h-screen"><Home /></section>
         <section id="about" className="min-h-screen"><About /></section>
-        <section id="certificates" className="min-h-screen"><Certificates /></section>
         <section id="work" className="min-h-screen"><Work /></section>
         <section id="projects" className="min-h-screen"><Projects /></section>
+        <section id="certificates" className="min-h-screen"><Certificates /></section>
       </main>
     </div>
   );

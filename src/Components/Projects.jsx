@@ -10,10 +10,19 @@ import image3 from '../assets/SSProject/bilingsys.png';
 import image4 from '../assets/SSProject/tictactoe.png';
 import image5 from '../assets/SSProject/SIH.png';
 import image6 from '../assets/SSProject/logithon.jpeg';
+import image7 from '../assets/SSProject/sih24.jpeg';
+
 
 // Categorized Projects
 const projectsData = {
   hackathon: [
+    {
+      title: 'Multi-Modal Cross-Border Route Selector',
+      description: 'A logistics optimization system using Dijkstra Algorithm',
+      imageUrl: image6,
+      projectUrl: 'https://github.com/Tech-Transit',
+      repoUrl: 'https://github.com/Tech-Transit'
+    },
     {
       title: 'SIH23',
       description: 'Smart India Hackathon 2023 project.',
@@ -24,17 +33,11 @@ const projectsData = {
     {
       title: 'SIH24',
       description: 'Smart India Hackathon 2024 project.',
-      imageUrl: image5,
+      imageUrl: image7,
       projectUrl: 'https://raghavendrabaheti.github.io/SIH23.github.io/',
       repoUrl: 'https://github.com/Raghavendrabaheti/SIH-2024'
     },
-    {
-      title: 'Multi-Modal Cross-Border Route Selector',
-      description: 'A logistics optimization system using Dijkstra Algorithm',
-      imageUrl: image6,
-      projectUrl: 'https://github.com/Raghavendrabaheti/LogiTHON-Route-Selector',
-      repoUrl: 'https://github.com/Tech-Transit'
-    },
+   
   ],
   web: [
     {
