@@ -92,7 +92,7 @@ const Projects = () => {
       id="projects"
       className="min-h-screen bg-[#0a0129] text-white flex flex-col items-center justify-center p-6"
     >
-      <h2 className="text-4xl font-bold text-blue-400 mb-12 text-center">My Projects</h2>
+      {/* <h2 className="text-4xl font-bold text-blue-400 mb-12 text-center">My Projects</h2> */}
       <ProjectSection title="🌐 Web Development Projects" projects={projectsData.web} />
       <ProjectSection title="⚙️ DevOps & Cloud Projects" projects={projectsData.devops} />
     </section>
