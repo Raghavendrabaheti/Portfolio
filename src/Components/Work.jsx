@@ -31,7 +31,7 @@ const hackathonProjects = [
 
 const Work = () => {
   return (
-    <section id="work" className="min-h-screen flex flex-col items-center justify-center px-6 bg-black text-white">
+    <section id="work" className="min-h-screen flex flex-col items-center justify-center px-6 bg-[#0a0129] text-white">
       <motion.h2
         className="text-4xl font-bold text-blue-400 mb-6"
         initial={{ opacity: 0, y: 20 }}
@@ -50,28 +50,27 @@ const Work = () => {
         Here are some hackathon projects I’ve worked on, demonstrating my expertise in software development and problem-solving.
       </motion.p>
       
-      <div className="overflow-x-auto scroll-smooth scrollbar-hide w-full">
-        <div className="flex flex-nowrap space-x-6 p-4 w-max">
-          {hackathonProjects.map((project, index) => (
-            <motion.div
-              key={index}
-              className="w-80 bg-gray-900 shadow-lg rounded-lg overflow-hidden snap-center"
-              whileHover={{ scale: 1.05 }}
-            >
-              <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover" />
-              <div className="p-4">
-                <h4 className="text-xl font-bold text-white mb-2">{project.title}</h4>
-                <p className="text-gray-400 mb-4">{project.description}</p>
-                <div className="flex justify-between items-center">
-                  <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">View Project</a>
-                  <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
-                    <GitHubIcon />
-                  </a>
-                </div>
+      {/* Centered Grid Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+        {hackathonProjects.map((project, index) => (
+          <motion.div
+            key={index}
+            className="w-80 bg-gray-900 shadow-lg rounded-lg overflow-hidden"
+            whileHover={{ scale: 1.05 }}
+          >
+            <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover" />
+            <div className="p-4">
+              <h4 className="text-xl font-bold text-white mb-2">{project.title}</h4>
+              <p className="text-gray-400 mb-4">{project.description}</p>
+              <div className="flex justify-between items-center">
+                <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">View Project</a>
+                <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+                  <GitHubIcon />
+                </a>
               </div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

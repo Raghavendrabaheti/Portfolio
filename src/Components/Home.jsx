@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-[#0b0b0f] bg-opacity-80 backdrop-blur-md shadow-md text-white py-4 px-6 z-50">
+    <nav className="fixed top-0 left-0 w-full bg-[#0a0129] bg-opacity-80 backdrop-blur-md shadow-md text-white py-4 px-6 z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Social Links */}
         <div className="hidden md:flex space-x-4">
@@ -58,7 +58,7 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="absolute top-full left-0 w-full bg-[#0b0b0f] bg-opacity-90 backdrop-blur-md shadow-lg text-white py-4 flex flex-col items-center space-y-4 md:hidden"
+          className="absolute top-full left-0 w-full bg-[#0a0129] bg-opacity-90 backdrop-blur-md shadow-lg text-white py-4 flex flex-col items-center space-y-4 md:hidden"
         >
           {["Home", "About", "Work", "Projects", "Certificates"].map((item) => (
             <a
@@ -100,7 +100,7 @@ const Home = () => {
   return (
     <section 
       id="home" 
-      className="relative flex flex-col-reverse md:flex-row items-center justify-center min-h-screen text-white px-6 md:px-12 lg:px-20 w-full bg-[#0b0b0f] overflow-auto"
+      className="relative flex flex-col-reverse md:flex-row items-center justify-center min-h-screen text-white px-6 md:px-12 lg:px-20 w-full bg-[#0a0129] overflow-auto"
     >
       <div className="w-full md:w-1/2 text-center md:text-left">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">

@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section 
       id="about" 
-      className="min-h-screen bg-[#0b0b0f] text-white flex flex-col items-center justify-center px-6 py-12 overflow-auto relative"
+      className="min-h-screen bg-[#0a0129] text-white flex flex-col items-center justify-center px-6 py-12 overflow-auto relative"
     >
       {/* Background Glow Effect */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_80%)] pointer-events-none"></div>

@@ -12,13 +12,13 @@ import certificate6 from '../assets/Certificates/sql2.jpg';
 import certificate7 from '../assets/Certificates/cybersecurity.jpg';
 
 const certificatesData = [
+  { name: 'Cybersecurity Certificate', url: certificate7, color: '#00bcd4' },
+  { name: 'MERN Stack Certificate', url: certificate4, color: '#1e90ff' },
   { name: 'CSS Certificate', url: certificate1, color: '#facc15' },
   { name: 'JavaScript Certificate', url: certificate2, color: '#ff7f50' },
   { name: 'MySQL Certificate', url: certificate3, color: '#66cdaa' },
-  { name: 'MERN Stack Certificate', url: certificate4, color: '#1e90ff' },
   { name: 'NDR Certificate', url: certificate5, color: '#ff4500' },
   { name: 'SQL Certificate', url: certificate6, color: '#4b0082' },
-  { name: 'Cybersecurity Certificate', url: certificate7, color: '#00bcd4' }
 ];
 
 const Certificates = () => {
@@ -29,7 +29,7 @@ const Certificates = () => {
   }, []);
 
   return (
-    <section id="certificates" className="bg-[#0b0b0f] text-white py-20 flex flex-col items-center">
+    <section id="certificates" className="bg-[#0a0129] text-white py-20 flex flex-col items-center">
       {/* Section Title */}
       <motion.h2 
         className="text-4xl md:text-5xl font-bold text-center mb-12"
