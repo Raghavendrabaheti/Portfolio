@@ -5,10 +5,10 @@ const About = () => {
   return (
     <section 
       id="about" 
-      className="min-h-screen bg-[#0b0b0f] text-white flex flex-col items-center justify-center px-6 py-12"
+      className="min-h-screen bg-[#0b0b0f] text-white flex flex-col items-center justify-center px-6 py-12 overflow-auto relative"
     >
       {/* Background Glow Effect */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_80%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_80%)] pointer-events-none"></div>
 
       {/* Animated Heading */}
       <motion.h2 
@@ -34,11 +34,11 @@ const About = () => {
         
         I specialize in <span className="font-semibold">Full-Stack Development</span>, particularly in the  
         <span className="text-[#FACC15]"> MERN</span> stack, along with <span className="text-[#00D8FF]">DevOps</span>.  
-        My expertise extends to **backend development, cloud deployment, and automation**,  
-        making me proficient in building **scalable and secure applications**.  
+        My expertise extends to <strong>backend development, cloud deployment, and automation</strong>,  
+        making me proficient in building <strong>scalable and secure applications</strong>.  
         
-        With a strong foundation in **Java & DSA**, I focus on **problem-solving,  
-        algorithm optimization, and competitive programming**.
+        With a strong foundation in <strong>Java & DSA</strong>, I focus on <strong>problem-solving,  
+        algorithm optimization, and competitive programming</strong>.
       </motion.p>
 
       {/* GitHub Contribution Calendar */}
@@ -51,7 +51,7 @@ const About = () => {
         <h3 className="text-2xl font-semibold text-[#FACC15] mb-4">
           GitHub Activity 📈
         </h3>
-        <div className="w-full overflow-x-auto">
+        <div className="w-full overflow-x-auto scrollbar-hide">
           <GitHubCalendar 
             username="Raghavendrabaheti" 
             blockSize={12} 

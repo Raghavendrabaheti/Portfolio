@@ -80,26 +80,32 @@ const projectsData = {
 const ProjectSection = ({ title, projects }) => (
   <div className="mb-12 w-full">
     <h3 className="text-3xl font-semibold text-blue-400 mb-6 text-center">{title}</h3>
-    <div className="overflow-x-auto flex space-x-6 scrollbar-hide p-4">
-      {projects.map((project, index) => (
-        <motion.div
-          key={index}
-          className="min-w-[320px] bg-gray-900 shadow-lg rounded-lg overflow-hidden"
-          whileHover={{ scale: 1.05 }}
-        >
-          <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover"/>
-          <div className="p-4">
-            <h4 className="text-xl font-bold text-white mb-2">{project.title}</h4>
-            <p className="text-gray-400 mb-4">{project.description}</p>
-            <div className="flex justify-between items-center">
-              <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">View Project</a>
-              <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
-                <GitHubIcon />
-              </a>
-            </div>
-          </div>
-        </motion.div>
-      ))}
+    
+    {/* Scrollable Container */}
+    <div className="relative w-full">
+      <div className="overflow-x-auto scroll-smooth scrollbar-hide w-full">
+        <div className="flex flex-nowrap space-x-6 p-4 w-max">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              className="w-80 bg-gray-900 shadow-lg rounded-lg overflow-hidden snap-center"
+              whileHover={{ scale: 1.05 }}
+            >
+              <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover" />
+              <div className="p-4">
+                <h4 className="text-xl font-bold text-white mb-2">{project.title}</h4>
+                <p className="text-gray-400 mb-4">{project.description}</p>
+                <div className="flex justify-between items-center">
+                  <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">View Project</a>
+                  <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+                    <GitHubIcon />
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </div>
   </div>
 );
