@@ -1,25 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import About from './Components/About';
 import Certificates from './Components/Certificates';
 import Work from './Components/Work';
-import Project from './Components/Project';
+import Projects from './Components/Projects';
 
-const AppRoutes = () => {
+const App = () => {
   return (
-    <Router>
+    <div className="h-screen overflow-y-auto scroll-smooth bg-gray-900 text-white">
       <Navbar />
-      <Routes>
-        <Route exact path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/certificates" element={<Certificates />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/project" element={<Project />} />
-      </Routes>
-    </Router>
+      <main className="flex flex-col">
+        <section id="home" className="min-h-screen"><Home /></section>
+        <section id="about" className="min-h-screen"><About /></section>
+        <section id="certificates" className="min-h-screen"><Certificates /></section>
+        <section id="work" className="min-h-screen"><Work /></section>
+        <section id="projects" className="min-h-screen"><Projects /></section>
+      </main>
+    </div>
   );
 };
 
-export default AppRoutes;
+export default App;

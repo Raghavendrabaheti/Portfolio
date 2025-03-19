@@ -14,6 +14,8 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.5",
     "@mui/material": "^6.4.3",
+    "@react-three/drei": "^10.0.4",
+    "@react-three/fiber": "^9.1.0",
     "@tailwindcss/vite": "^4.0.5",
     "bootstrap-icons": "^1.11.3",
     "framer-motion": "^12.4.1",
@@ -23,7 +25,8 @@
     "react-github-calendar": "^4.5.5",
     "react-router-dom": "^7.1.5",
     "react-scroll": "^1.9.2",
-    "tailwindcss": "^4.0.5"
+    "tailwindcss": "^4.0.5",
+    "three": "^0.174.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

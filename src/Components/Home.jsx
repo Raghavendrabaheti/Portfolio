@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { Canvas } from '@react-three/fiber';
+import { Sphere, MeshDistortMaterial, OrbitControls } from '@react-three/drei';
 
 const Home = () => {
   return (
@@ -6,11 +8,28 @@ const Home = () => {
       id="home" 
       className="relative flex flex-col items-start justify-center min-h-screen text-white px-6 md:px-12 lg:px-20 w-full bg-[#0b0b0f] overflow-hidden"
     >
-      {/* Subtle Animated Background with Glow */}
+      {/* Subtle Animated Background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.06),_transparent_80%)]"></div>
       <div className="absolute top-0 left-0 w-72 md:w-96 h-72 md:h-96 bg-blue-500 rounded-full opacity-10 blur-3xl animate-pulse"></div>
-      
-      {/* Animated Content Container */}
+
+      {/* 3D Sphere Background */}
+      <div className="absolute top-0 right-0 w-full h-full opacity-20">
+        <Canvas>
+          <OrbitControls enableZoom={false} />
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[2, 2, 2]} intensity={1} />
+          <Sphere args={[1.5, 100, 200]} scale={2}>
+            <MeshDistortMaterial 
+              color="#0066ff" 
+              attach="material" 
+              distort={0.5} 
+              speed={2} 
+            />
+          </Sphere>
+        </Canvas>
+      </div>
+
+      {/* Animated Content */}
       <motion.div 
         className="relative text-left max-w-3xl p-6 md:p-10 rounded-lg border border-gray-800 bg-[#12121a] backdrop-blur-lg shadow-2xl shadow-black/50"
         initial={{ opacity: 0, y: 15 }}
@@ -25,7 +44,7 @@ const Home = () => {
         </h1>
 
         <p className="text-base md:text-lg lg:text-xl text-gray-400 mb-6 md:mb-8">
-          A JavaScript & DevOps enthusiast, crafting efficient and scalable applications with a passion for technology.
+          A passionate DevOps and software engineering enthusiast, dedicated to building scalable and efficient applications with a strong focus on automation and deployment.
         </p>
 
         {/* Sleek Buttons with Hover Effects */}
