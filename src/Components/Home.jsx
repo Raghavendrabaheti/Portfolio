@@ -38,7 +38,7 @@ const Home = () => {
       >
         {/* Profile Photo */}
         <img 
-          src="/your-photo.jpg" 
+          src="/.jpg" 
           alt="Raghavendra Baheti" 
           className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-gray-700 shadow-lg mb-4"
         />
