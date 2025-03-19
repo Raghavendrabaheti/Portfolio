@@ -26,14 +26,14 @@ const projectsData = {
       description: 'Smart India Hackathon 2024 project.',
       imageUrl: image5,
       projectUrl: 'https://raghavendrabaheti.github.io/SIH23.github.io/',
-      repoUrl: 'https://github.com/Raghavendrabaheti/SIH23.github.io'
+      repoUrl: 'https://github.com/Raghavendrabaheti/SIH-2024'
     },
     {
       title: 'Multi-Modal Cross-Border Route Selector',
       description: 'A logistics optimization system using Dijkstra Algorithm',
       imageUrl: image6,
       projectUrl: 'https://github.com/Raghavendrabaheti/LogiTHON-Route-Selector',
-      repoUrl: 'https://github.com/Raghavendrabaheti/LogiTHON-Route-Selector'
+      repoUrl: 'https://github.com/Tech-Transit'
     },
   ],
   web: [
