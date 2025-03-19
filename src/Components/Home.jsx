@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
 import { Sphere, MeshDistortMaterial, OrbitControls } from '@react-three/drei';
+import profilePic from "../assets/bg1.jpg"; // Import your profile picture
 
 const Home = () => {
   return (
@@ -38,7 +39,7 @@ const Home = () => {
       >
         {/* Profile Photo */}
         <img 
-          src="/.jpg" 
+          src="/assets/bg1.jpg" 
           alt="Raghavendra Baheti" 
           className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-gray-700 shadow-lg mb-4"
         />
