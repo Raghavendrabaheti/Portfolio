@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-8 text-lg font-medium">
-          {["Home", "About", "Work", "Projects", "Certificates"].map((item) => (
+          {["Home", "Work", "Projects", "Certificates"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}
@@ -61,7 +61,7 @@ const Navbar = () => {
             exit={{ opacity: 0, y: -20 }}
             className="absolute top-full left-0 w-full bg-gray-900 bg-opacity-95 backdrop-blur-lg shadow-lg text-white py-5 flex flex-col items-center space-y-6 md:hidden"
           >
-            {["Home", "About", "Work", "Projects", "Certificates"].map((item) => (
+            {["Home", "Work", "Projects", "Certificates"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}

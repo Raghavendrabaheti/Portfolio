@@ -5,6 +5,7 @@ import About from './Components/About';
 import Certificates from './Components/Certificates';
 import Work from './Components/Work';
 import Projects from './Components/Projects';
+import Contact from "./Components/Contact";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <section id="work" className="min-h-screen"><Work /></section>
         <section id="projects" className="min-h-screen"><Projects /></section>
         <section id="certificates" className="min-h-screen"><Certificates /></section>
+        <section id="contact" className="min-h-screen"><Contact /></section>
       </main>
     </div>
   );
