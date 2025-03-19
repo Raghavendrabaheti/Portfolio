@@ -107,8 +107,7 @@ const Home = () => {
           Hi, I am <span className="text-blue-400">Raghavendra Baheti</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-6">
-          A Passionate DevOps and Software Engineering enthusiast, building scalable applications with automation and seamless deployment.
-        </p>
+        A passionate DevOps and Software Engineering enthusiast, dedicated to building scalable, high-performance applications with a strong focus on automation, seamless deployment, and infrastructure optimization. Continuously exploring cutting-edge technologies to enhance system reliability, CI/CD pipelines, and cloud-native solutions.        </p>
         <div className="flex space-x-4">
           <a href="your_resume_link.pdf" target="_blank" className="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white transition shadow-lg shadow-blue-700/40">
             My Resume
