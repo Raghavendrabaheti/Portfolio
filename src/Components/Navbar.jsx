@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-gray-900 bg-opacity-80 backdrop-blur-lg shadow-lg text-white py-4 px-6 z-50">
+    <nav className="fixed top-0 left-0 w-full bg-[#0a0129] bg-opacity-80 backdrop-blur-lg shadow-lg text-white py-4 px-6 z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-8 text-lg font-medium">
