@@ -1,6 +1,7 @@
 import React from "react";
 import Routes from "./Router.jsx";
 import Footer from "./Components/Footer.jsx";
+import ScrollToTop from "./Components/ScrollToTop.jsx";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
         <Routes />
       </div>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

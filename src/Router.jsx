@@ -6,22 +6,18 @@ import Certificates from './Components/Certificates';
 import Work from './Components/Work';
 import Projects from './Components/Projects';
 import Contact from "./Components/Contact";
-// import Footer from "./Components/Footer";
-
 
 const App = () => {
   return (
-    <div className="h-screen overflow-y-auto scroll-smooth bg-gray-900 text-white">
+    <div className="min-h-screen overflow-y-auto scroll-smooth bg-gradient-main text-white">
       <Navbar />
-      <main className="flex flex-col">
-        <section id="home" className="min-h-screen"><Home /></section>
-        <section id="about" className="min-h-screen"><About /></section>
-        <section id="work" className="min-h-screen"><Work /></section>
-        <section id="projects" className="min-h-screen"><Projects /></section>
-        <section id="certificates" className="min-h-screen"><Certificates /></section>
-        <section id="contact" className="min-h-screen"><Contact /></section>
-        {/* <section id="footer" className="min-h-screen"><Footer /></section> */}
-
+      <main className="pt-16">
+        <Home />
+        <About />
+        <Work />
+        <Projects />
+        <Certificates />
+        <Contact />
       </main>
     </div>
   );
