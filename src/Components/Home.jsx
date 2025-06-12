@@ -148,14 +148,14 @@ const Home = () => {
                   transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
                   className="text-center lg:text-left group hover-lift relative"
                 >
-                  <div className="text-2xl mb-2">{stat.icon}</div>
+                  {/* <div className="text-2xl mb-2">{stat.icon}</div>
                   <div className="text-3xl md:text-4xl font-bold gradient-text text-glow mb-1">
                     {stat.number}
-                  </div>
-                  <div className="text-sm text-gray-400 font-medium tracking-wide group-hover:text-gray-300 transition-colors">
+                  </div> */}
+                  {/* <div className="text-sm text-gray-400 font-medium tracking-wide group-hover:text-gray-300 transition-colors">
                     {stat.label}
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-primary/5 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
+                  </div> */}
+                  {/* <div className="absolute inset-0 bg-gradient-primary/5 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div> */}
                 </motion.div>
               ))}
             </motion.div>
