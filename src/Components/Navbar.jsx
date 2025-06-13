@@ -45,8 +45,8 @@ const Navbar = () => {
     <motion.nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ${
         scrolled 
-          ? "bg-black/10 backdrop-blur-heavy shadow-2xl shadow-black/10 border-b border-white/10" 
-          : "bg-transparent"
+          ? "glass-effect backdrop-blur-heavy shadow-2xl shadow-black/20 border-b border-white/20" 
+          : "bg-white/5 backdrop-blur-light border-b border-white/10"
       }`}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -64,8 +64,8 @@ const Navbar = () => {
           >
             <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-lg">RB</span>
+                <div className="w-10 h-10 glass-effect border border-white/20 rounded-xl flex items-center justify-center shadow-lg">
+                  <span className="text-white font-bold text-lg bg-gradient-primary bg-clip-text text-transparent">RB</span>
                 </div>
                 <motion.div
                   className="absolute -top-2 -right-2 w-4 h-4"
@@ -111,14 +111,15 @@ const Navbar = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 glass-effect hover:bg-white/10 border border-white/10 hover:border-white/25 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-all duration-400 group"
+                  className="w-10 h-10 glass-effect hover:bg-white/15 border border-white/20 hover:border-white/40 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-all duration-400 group relative overflow-hidden"
                   whileHover={{ scale: 1.1, y: -3 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                 >
-                  <social.icon size={18} className="group-hover:scale-110 transition-transform duration-300" />
+                  <social.icon size={18} className="group-hover:scale-110 transition-transform duration-300 relative z-10" />
+                  <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
                 </motion.a>
               ))}
             </div>
@@ -126,21 +127,22 @@ const Navbar = () => {
             {/* Enhanced CTA Button */}
             <motion.a
               href="#contact"
-              className="btn-primary text-sm px-6 py-3 font-medium"
+              className="btn-primary text-sm px-6 py-3 font-medium relative overflow-hidden glass-effect border border-white/20 hover:border-white/40"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1.1 }}
             >
-              Let's Talk ✨
+              <span className="relative z-10">Let's Talk ✨</span>
+              <div className="absolute inset-0 bg-gradient-primary opacity-20"></div>
             </motion.a>
           </div>
 
           {/* Enhanced Mobile Menu Toggle */}
           <motion.button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden w-11 h-11 glass-effect hover:bg-white/10 border border-white/10 rounded-xl flex items-center justify-center text-white transition-all duration-400"
+            className="md:hidden w-11 h-11 glass-effect hover:bg-white/15 border border-white/20 hover:border-white/40 rounded-xl flex items-center justify-center text-white transition-all duration-400 relative overflow-hidden"
             whileTap={{ scale: 0.95 }}
             whileHover={{ scale: 1.05 }}
           >
@@ -152,6 +154,7 @@ const Navbar = () => {
                   animate={{ rotate: 0, opacity: 1 }}
                   exit={{ rotate: 90, opacity: 0 }}
                   transition={{ duration: 0.3 }}
+                  className="relative z-10"
                 >
                   <X size={22} />
                 </motion.div>
@@ -162,11 +165,13 @@ const Navbar = () => {
                   animate={{ rotate: 0, opacity: 1 }}
                   exit={{ rotate: -90, opacity: 0 }}
                   transition={{ duration: 0.3 }}
+                  className="relative z-10"
                 >
                   <Menu size={22} />
                 </motion.div>
               )}
             </AnimatePresence>
+            <div className="absolute inset-0 bg-gradient-primary opacity-0 hover:opacity-10 transition-opacity duration-300"></div>
           </motion.button>
         </div>
 
@@ -178,16 +183,16 @@ const Navbar = () => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="md:hidden overflow-hidden border-t border-white/10"
+              className="md:hidden overflow-hidden border-t border-white/20 backdrop-blur-heavy"
             >
-              <div className="card-modern p-8 m-4 mt-0 rounded-b-3xl">
+              <div className="glass-effect border border-white/10 p-8 m-4 mt-0 rounded-b-3xl shadow-2xl shadow-black/20">
                 {/* Navigation Links */}
                 <div className="space-y-6 mb-8">
                   {navItems.map((item, index) => (
                     <motion.a
                       key={item.name}
                       href={item.href}
-                      className="block text-gray-300 hover:text-white transition-all duration-400 py-3 text-xl font-medium group relative"
+                      className="block text-gray-300 hover:text-white transition-all duration-400 py-3 text-xl font-medium group relative glass-effect rounded-lg px-4 border border-transparent hover:border-white/20"
                       onClick={() => setIsOpen(false)}
                       initial={{ opacity: 0, x: -30 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -195,7 +200,7 @@ const Navbar = () => {
                       whileHover={{ x: 12 }}
                     >
                       <span className="relative z-10">{item.name}</span>
-                      <span className="absolute left-0 top-0 w-0 h-full bg-gradient-primary/10 transition-all duration-400 group-hover:w-full rounded-lg -z-0"></span>
+                      <span className="absolute left-0 top-0 w-0 h-full bg-gradient-primary/20 transition-all duration-400 group-hover:w-full rounded-lg -z-0"></span>
                     </motion.a>
                   ))}
                 </div>
