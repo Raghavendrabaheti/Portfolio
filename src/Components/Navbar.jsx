@@ -65,7 +65,7 @@ const Navbar = () => {
             <div className="flex items-center gap-3">
               <div className="relative">
                 <div className="w-10 h-10 glass-effect border border-white/20 rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="font-bold text-lg bg-gradient-primary bg-clip-text text-transparent">RB</span>
+                  <span className="text-white font-bold text-lg bg-gradient-primary bg-clip-text text-transparent">RB</span>
                 </div>
                 <motion.div
                   className="absolute -top-2 -right-2 w-4 h-4"
