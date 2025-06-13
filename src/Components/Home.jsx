@@ -76,11 +76,11 @@ const Home = () => {
       </div>
 
       <div className="container-modern">
-        <div className="flex flex-col lg:flex-row items-center justify-between min-h-screen py-20 gap-16">
+        <div className="flex flex-col lg:flex-row items-center justify-between min-h-screen py-12 sm:py-16 lg:py-20 gap-8 sm:gap-12 lg:gap-16">
           
           {/* Left Content */}
           <motion.div 
-            className="lg:w-1/2 space-y-8"
+            className="w-full lg:w-1/2 space-y-6 sm:space-y-8 mobile-center lg:text-left"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -90,16 +90,16 @@ const Home = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="inline-flex items-center gap-3 glass-effect rounded-full px-6 py-3 backdrop-blur-light border border-white/10"
+              className="inline-flex items-center gap-2 sm:gap-3 glass-effect rounded-full px-4 sm:px-6 py-2 sm:py-3 backdrop-blur-light border border-white/10 mobile-full-width sm:w-auto justify-center"
             >
               <motion.div
                 animate={{ rotate: [0, 360] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               >
-                <Coffee className="w-4 h-4 text-blue-400" />
+                <Coffee className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400" />
               </motion.div>
-              <span className="text-blue-300 text-sm font-medium tracking-wide">Available for opportunities</span>
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-blue-300 text-xs sm:text-sm font-medium tracking-wide">Available for opportunities</span>
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full animate-pulse"></div>
             </motion.div>
 
             {/* Main heading */}
@@ -107,7 +107,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="space-y-4"
+              className="space-y-3 sm:space-y-4"
             >
               <h1 className="text-responsive-xl text-white leading-tight text-balance">
                 Hi, I'm{" "}
@@ -115,18 +115,18 @@ const Home = () => {
                 <motion.span
                   animate={{ rotate: [0, 14, 0] }}
                   transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                  className="inline-block origin-bottom-right ml-2"
+                  className="inline-block origin-bottom-right ml-1 sm:ml-2"
                 >
                   👋
                 </motion.span>
               </h1>
               
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 <p className="text-responsive-md text-gray-200 font-light">
                   <span className="gradient-text-tertiary">DevOps Engineer</span> & 
                   <span className="gradient-text-secondary"> Full Stack Developer</span>
                 </p>
-                <p className="text-lg text-gray-300 max-w-2xl leading-relaxed text-pretty">
+                <p className="text-base sm:text-lg text-gray-300 max-w-2xl leading-relaxed text-pretty">
                   I craft scalable digital experiences with clean code, robust architecture, 
                   and seamless deployment pipelines that transform ideas into reality.
                 </p>
@@ -138,7 +138,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-8"
+              className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"
             >
               {stats.map((stat, index) => (
                 <motion.div
@@ -162,22 +162,22 @@ const Home = () => {
 
             {/* Enhanced CTA buttons */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-5"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-5"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
               <motion.a 
                 href="#projects" 
-                className="btn-primary inline-flex items-center gap-3 justify-center text-base shimmer group"
+                className="btn-primary inline-flex items-center gap-2 sm:gap-3 justify-center text-sm sm:text-base shimmer group mobile-full-width"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >
-                <Code size={20} />
+                <Code size={18} className="sm:w-5 sm:h-5" />
                 View My Work
                 <motion.div
-                  className="w-2 h-2 bg-white/30 rounded-full"
+                  className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white/30 rounded-full"
                   animate={{ scale: [1, 1.3, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 />
@@ -186,12 +186,12 @@ const Home = () => {
               <motion.a 
                 href="/src/assets/Raghavendraa.pdf" 
                 target="_blank"
-                className="btn-secondary inline-flex items-center gap-3 justify-center text-base group"
+                className="btn-secondary inline-flex items-center gap-2 sm:gap-3 justify-center text-sm sm:text-base group mobile-full-width"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >
-                <Download size={20} />
+                <Download size={18} className="sm:w-5 sm:h-5" />
                 Download Resume
                 <motion.div
                   className="w-1 h-1 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100"
@@ -206,10 +206,10 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 }}
-              className="flex items-center gap-8 text-sm text-gray-400"
+              className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-xs sm:text-sm text-gray-400"
             >
-              <span className="font-medium">Quick links:</span>
-              <div className="flex gap-6">
+              <span className="font-medium mobile-hidden">Quick links:</span>
+              <div className="flex gap-4 sm:gap-6">
                 <a href="#about" className="hover:text-blue-400 transition-all duration-300 hover-lift relative group">
                   About
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full rounded-full"></span>
@@ -228,7 +228,7 @@ const Home = () => {
 
           {/* Enhanced Right Content - Profile */}
           <motion.div 
-            className="lg:w-1/2 flex justify-center lg:justify-end"
+            className="w-full lg:w-1/2 flex justify-center lg:justify-end order-first lg:order-last"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -236,13 +236,13 @@ const Home = () => {
             <div className="relative">
               {/* Enhanced floating decorations */}
               <motion.div
-                className="absolute -top-12 -left-12 w-20 h-20 border-2 border-blue-500/30 rounded-3xl backdrop-blur-sm glass-effect"
+                className="absolute -top-6 sm:-top-12 -left-6 sm:-left-12 w-12 h-12 sm:w-20 sm:h-20 border-2 border-blue-500/30 rounded-2xl sm:rounded-3xl backdrop-blur-sm glass-effect"
                 animate={{ rotate: [0, 360] }}
                 transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
               />
               
               <motion.div
-                className="absolute -bottom-8 -left-8 w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl backdrop-blur-sm"
+                className="absolute -bottom-4 sm:-bottom-8 -left-4 sm:-left-8 w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl sm:rounded-2xl backdrop-blur-sm"
                 animate={{ 
                   rotate: [0, -360],
                   scale: [1, 1.1, 1]
@@ -252,7 +252,7 @@ const Home = () => {
               
               {/* Main profile container with enhanced effects */}
               <motion.div 
-                className="relative w-80 h-80 md:w-96 md:h-96 group"
+                className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 group"
                 whileHover={{ scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
