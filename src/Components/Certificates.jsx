@@ -14,7 +14,7 @@ import 'swiper/css/effect-coverflow';
 // Manually import certificates
 import certificate1 from '../assets/Certificates/CSS.png';
 import certificate2 from '../assets/Certificates/js.png';
-import certificate3 from '../assets/Certificates/MYSQL.png';
+// import certificate3 from '../assets/Certificates/MYSQL.png';
 import certificate4 from '../assets/Certificates/Mernstack.jpg';
 import certificate5 from '../assets/Certificates/ndr.jpeg';
 import certificate6 from '../assets/Certificates/sql2.jpg';
