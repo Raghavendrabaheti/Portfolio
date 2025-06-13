@@ -57,15 +57,15 @@ const certificatesData = [
     skills: ['CSS Grid', 'Flexbox', 'Animations', 'Responsive Design'],
     category: 'Frontend'
   },
-  {
-    title: 'MySQL Database Management',
-    issuer: 'Database Academy',
-    date: '2023',
-    image: certificate3,
-    description: 'Database design, optimization, complex queries, and performance tuning',
-    skills: ['SQL Queries', 'Database Design', 'Performance Tuning'],
-    category: 'Database'
-  },
+  // {
+  //   title: 'MySQL Database Management',
+  //   issuer: 'Database Academy',
+  //   date: '2023',
+  //   image: certificate3,
+  //   description: 'Database design, optimization, complex queries, and performance tuning',
+  //   skills: ['SQL Queries', 'Database Design', 'Performance Tuning'],
+  //   category: 'Database'
+  // },
   {
     title: 'Network Defense & Response',
     issuer: 'Cybersecurity Institute',
