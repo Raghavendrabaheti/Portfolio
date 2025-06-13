@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, ExternalLink, Play, Filter, Grid3X3, List } from 'lucide-react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper modules
+import { Navigation, Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
 
 // Import project images
 import quizImg from '../assets/SSProject/quizdsa.png';
@@ -53,6 +62,19 @@ const projects = [
 const Projects = () => {
   const [filter, setFilter] = useState('All');
   const [viewMode, setViewMode] = useState('grid');
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Check if screen is mobile/tablet size
+  React.useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 1024); // lg breakpoint
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
   
   const categories = ['All', ...new Set(projects.map(project => project.category))];
   const filteredProjects = filter === 'All' 
@@ -301,27 +323,79 @@ const Projects = () => {
           </div>
         </motion.div>
         
-        {/* Projects Grid/List */}
+        {/* Projects Grid/List/Carousel */}
         <AnimatePresence mode="wait">
           <motion.div
             key={filter + viewMode}
-            className={`${
-              viewMode === 'grid' 
-                ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' 
-                : 'space-y-8'
-            }`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            {filteredProjects.map((project, index) => (
-              <ProjectCard 
-                key={project.id} 
-                project={project} 
-                index={index}
-              />
-            ))}
+            {isMobile ? (
+              // Mobile/Tablet Carousel
+              <div className="projects-swiper-container">
+                <Swiper
+                  modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
+                  spaceBetween={20}
+                  slidesPerView={1}
+                  centeredSlides={true}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  pagination={{
+                    clickable: true,
+                    dynamicBullets: true,
+                    bulletClass: 'project-bullet',
+                    bulletActiveClass: 'project-bullet-active',
+                  }}
+                  effect="coverflow"
+                  coverflowEffect={{
+                    rotate: 15,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                  }}
+                  breakpoints={{
+                    640: {
+                      slidesPerView: 1.2,
+                      spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 1.5,
+                      spaceBetween: 30,
+                    },
+                  }}
+                  className="projects-swiper"
+                >
+                  {filteredProjects.map((project, index) => (
+                    <SwiperSlide key={project.id}>
+                      <ProjectCard project={project} index={index} />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+            ) : (
+              // Desktop Grid/List
+              <div
+                className={`${
+                  viewMode === 'grid' 
+                    ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' 
+                    : 'space-y-8'
+                }`}
+              >
+                {filteredProjects.map((project, index) => (
+                  <ProjectCard 
+                    key={project.id} 
+                    project={project} 
+                    index={index}
+                  />
+                ))}
+              </div>
+            )}
           </motion.div>
         </AnimatePresence>
 

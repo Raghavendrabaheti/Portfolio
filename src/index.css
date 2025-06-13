@@ -1021,3 +1021,103 @@ body {
     padding: 0 15px;
   }
 }
+
+/* Projects Carousel Styles */
+.projects-swiper-container {
+  overflow: visible;
+  padding: 0 20px;
+}
+
+.projects-swiper {
+  overflow: visible;
+  padding: 20px 0;
+}
+
+.projects-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: auto;
+}
+
+.projects-swiper .swiper-pagination {
+  position: relative !important;
+  margin-top: 2rem;
+  bottom: auto !important;
+}
+
+.project-bullet {
+  background: rgba(255, 255, 255, 0.3) !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.project-bullet-active {
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%) !important;
+  transform: scale(1.2) !important;
+}
+
+.projects-swiper .swiper-button-prev,
+.projects-swiper .swiper-button-next {
+  display: none;
+}
+
+.projects-swiper .swiper-slide-shadow-left,
+.projects-swiper .swiper-slide-shadow-right {
+  background: linear-gradient(to right, rgba(0,0,0,0.4), transparent) !important;
+}
+
+/* Mobile project carousel adjustments */
+@media (max-width: 639px) {
+  .projects-swiper-container {
+    padding: 0 10px;
+  }
+  
+  .projects-swiper .swiper-slide {
+    padding: 0 5px;
+  }
+}
+
+/* Work Carousel Styles */
+.work-swiper-container {
+  overflow: visible;
+  padding: 0 20px;
+}
+
+.work-swiper {
+  overflow: visible;
+  padding: 20px 0;
+}
+
+.work-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: auto;
+}
+
+.work-swiper .swiper-pagination {
+  position: relative !important;
+  margin-top: 2rem;
+  bottom: auto !important;
+}
+
+.work-bullet {
+  background: rgba(255, 255, 255, 0.3) !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.work-bullet-active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  transform: scale(1.2) !important;
+}
+
+.work-swiper .swiper-slide-shadow-left,
+.work-swiper .swiper-slide-shadow-right {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+}

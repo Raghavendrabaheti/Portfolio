@@ -228,7 +228,7 @@ const Home = () => {
 
           {/* Enhanced Right Content - Profile */}
           <motion.div 
-            className="w-full lg:w-1/2 flex justify-center lg:justify-end order-first lg:order-last"
+            className="lg:w-1/2 flex justify-center lg:justify-end"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -236,13 +236,13 @@ const Home = () => {
             <div className="relative">
               {/* Enhanced floating decorations */}
               <motion.div
-                className="absolute -top-6 sm:-top-12 -left-6 sm:-left-12 w-12 h-12 sm:w-20 sm:h-20 border-2 border-blue-500/30 rounded-2xl sm:rounded-3xl backdrop-blur-sm glass-effect"
+                className="absolute -top-12 -left-12 w-20 h-20 border-2 border-blue-500/30 rounded-3xl backdrop-blur-sm glass-effect"
                 animate={{ rotate: [0, 360] }}
                 transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
               />
               
               <motion.div
-                className="absolute -bottom-4 sm:-bottom-8 -left-4 sm:-left-8 w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl sm:rounded-2xl backdrop-blur-sm"
+                className="absolute -bottom-8 -left-8 w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl backdrop-blur-sm"
                 animate={{ 
                   rotate: [0, -360],
                   scale: [1, 1.1, 1]
@@ -252,7 +252,7 @@ const Home = () => {
               
               {/* Main profile container with enhanced effects */}
               <motion.div 
-                className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 group"
+                className="relative w-80 h-80 md:w-96 md:h-96 group"
                 whileHover={{ scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
