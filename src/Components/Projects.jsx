@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, ExternalLink, Play, Filter, Grid3X3, List } from 'lucide-react';
+import LazyImage from './LazyImage';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper modules
@@ -12,9 +13,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 
 // Import project images
-import quizImg from '../assets/SSProject/quizdsa.png';
-import multiGameImg from '../assets/SSProject/MultiGame.png';
-import tictactoeImg from '../assets/SSProject/tictactoe.png';
+import quizImg from '../assets/optimized/SSProject/quizdsa.webp';
+import multiGameImg from '../assets/optimized/SSProject/MultiGame.webp';
+import tictactoeImg from '../assets/optimized/SSProject/tictactoe.webp';
 
 // Projects data
 const projects = [
@@ -96,10 +97,10 @@ const Projects = () => {
       <div className={`relative overflow-hidden ${
         viewMode === 'list' ? 'md:w-1/3' : 'h-48'
       }`}>
-        <img 
+        <LazyImage 
           src={project.image} 
           alt={project.title} 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full transition-transform duration-700 group-hover:scale-110"
         />
         
         {/* Enhanced Overlay */}

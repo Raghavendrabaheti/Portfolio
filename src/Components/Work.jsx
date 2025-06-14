@@ -10,9 +10,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
-import image5 from '../assets/SSProject/SIH.png';
-import image6 from '../assets/SSProject/logithon.jpeg';
-import image7 from '../assets/SSProject/sih24.jpeg';
+import image5 from '../assets/optimized/SSProject/SIH.webp';
+import image6 from '../assets/optimized/SSProject/logithon.webp';
+import image7 from '../assets/optimized/SSProject/sih24.webp';
 
 const hackathonProjects = [
   {

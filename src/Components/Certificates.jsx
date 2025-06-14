@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Award, Calendar, ExternalLink, Download, ChevronLeft, ChevronRight } from 'lucide-react';
+import LazyImage from './LazyImage';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper modules
@@ -12,13 +13,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 
 // Manually import certificates
-import certificate1 from '../assets/Certificates/CSS.png';
-import certificate2 from '../assets/Certificates/js.png';
+import certificate1 from '../assets/optimized/Certificates/CSS.webp';
+import certificate2 from '../assets/optimized/Certificates/js.webp';
 // import certificate3 from '../assets/Certificates/MYSQL.png';
-import certificate4 from '../assets/Certificates/Mernstack.jpg';
-import certificate5 from '../assets/Certificates/ndr.jpeg';
-import certificate6 from '../assets/Certificates/sql2.jpg';
-import certificate7 from '../assets/Certificates/cybersecurity.jpg';
+import certificate4 from '../assets/optimized/Certificates/Mernstack.webp';
+import certificate5 from '../assets/optimized/Certificates/ndr.webp';
+import certificate6 from '../assets/optimized/Certificates/sql2.webp';
+import certificate7 from '../assets/optimized/Certificates/cybersecurity.webp';
 
 const certificatesData = [
   {

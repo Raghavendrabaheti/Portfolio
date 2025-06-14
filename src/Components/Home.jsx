@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Download, ExternalLink, Sparkles, Code, Coffee } from "lucide-react";
-import profilePic from "../assets/profile.jpeg";
+import profilePic from "../assets/optimized/profile.webp";
 
 const Home = () => {
   const stats = [
