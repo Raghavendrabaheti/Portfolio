@@ -1121,3 +1121,183 @@ body {
 .work-swiper .swiper-slide-shadow-right {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
 }
+
+/* Mobile Performance Optimizations */
+@media (max-width: 768px) {
+  /* Reduce animations and effects for mobile performance */
+  *, *::before, *::after {
+    transform-style: flat !important;
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  /* Optimize backdrop filters for mobile */
+  .backdrop-blur-heavy {
+    backdrop-filter: blur(8px) !important;
+  }
+  
+  .backdrop-blur-light {
+    backdrop-filter: blur(4px) !important;
+  }
+  
+  /* Reduce complex gradients on mobile */
+  .bg-gradient-main {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%) !important;
+  }
+  
+  /* Simplify mesh background for mobile */
+  .bg-mesh {
+    background-image: none !important;
+    background: var(--bg-primary) !important;
+  }
+  
+  /* Optimize particle backgrounds */
+  .grid-bg::before,
+  .grid-bg::after {
+    display: none !important;
+  }
+  
+  /* Reduce shadow complexity */
+  .card-modern {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  /* Optimize font rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed !important;
+  }
+  
+  /* Force hardware acceleration */
+  .card-modern,
+  .btn-primary,
+  .btn-secondary {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+  
+  /* Disable complex animations on mobile */
+  .shimmer::before {
+    animation: none !important;
+  }
+  
+  /* Optimize image containers */
+  img {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+}
+
+/* Low-end device optimizations */
+@media (max-width: 480px) {
+  /* Further reduce effects for low-end devices */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: none !important;
+  }
+  
+  /* Disable transforms on very small screens */
+  .float,
+  .pulse-slow {
+    animation: none !important;
+  }
+  
+  /* Simplify gradients */
+  .gradient-text {
+    background: var(--accent-primary) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: var(--accent-primary) !important;
+  }
+}
+
+/* Mobile Performance Optimizations */
+@media (max-width: 768px) {
+  /* Reduce animations and effects for mobile performance */
+  *, *::before, *::after {
+    transform-style: flat !important;
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  /* Optimize backdrop filters for mobile */
+  .backdrop-blur-heavy {
+    backdrop-filter: blur(8px) !important;
+  }
+  
+  .backdrop-blur-light {
+    backdrop-filter: blur(4px) !important;
+  }
+  
+  /* Reduce complex gradients on mobile */
+  .bg-gradient-main {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%) !important;
+  }
+  
+  /* Simplify mesh background for mobile */
+  .bg-mesh {
+    background-image: none !important;
+    background: var(--bg-primary) !important;
+  }
+  
+  /* Optimize particle backgrounds */
+  .grid-bg::before,
+  .grid-bg::after {
+    display: none !important;
+  }
+  
+  /* Reduce shadow complexity */
+  .card-modern {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  /* Optimize font rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed !important;
+  }
+  
+  /* Force hardware acceleration */
+  .card-modern,
+  .btn-primary,
+  .btn-secondary {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+  
+  /* Disable complex animations on mobile */
+  .shimmer::before {
+    animation: none !important;
+  }
+  
+  /* Optimize image containers */
+  img {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+}
+
+/* Low-end device optimizations */
+@media (max-width: 480px) {
+  /* Further reduce effects for low-end devices */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: none !important;
+  }
+  
+  /* Disable transforms on very small screens */
+  .float,
+  .pulse-slow {
+    animation: none !important;
+  }
+  
+  /* Simplify gradients */
+  .gradient-text {
+    background: var(--accent-primary) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: var(--accent-primary) !important;
+  }
+}
